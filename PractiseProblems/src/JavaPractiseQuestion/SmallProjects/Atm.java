@@ -3,13 +3,12 @@ package JavaPractiseQuestion.SmallProjects;
 import java.util.Scanner;
 
 
-class  InvalidCustomerException extends Exception {
+class InvalidCustomerException extends Exception {
 	
 	public InvalidCustomerException(String msg)
 	{
 		super(msg);
 	}
-	
 }
 
 

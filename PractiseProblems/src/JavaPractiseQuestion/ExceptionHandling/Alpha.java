@@ -11,7 +11,6 @@ public class Alpha {
 		demo.Calc();
 		System.out.println("Alpha end");
 	}
-
 }
 
 
@@ -37,12 +36,11 @@ class Demo{
 		{
 			System.out.println("add non zero value here");
 		}
-		finally {
+		finally 
+		{
 			System.out.println("code is closing right now");
 		}
-		
 		System.out.println("Demo End");
-		
 	}
 }
 	

@@ -23,5 +23,4 @@ public class HashSetPract {
 		
 		System.out.println(hs);
 	}
-
 }
