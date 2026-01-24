@@ -8,6 +8,7 @@ public class BasicConcept {
 		String s1="Tanmay";
 		String s2 ="Tanmay";
 		System.out.println(s1==s2); // true compare refrence
+		System.out.println(s1.equals(s2));
 		
 		System.out.println("-------------------------------");
 		
