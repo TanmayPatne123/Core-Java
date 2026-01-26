@@ -15,7 +15,6 @@ public class RemoveDash {
 			{
 				break;
 			}
-			
 			System.out.print(a[i]);
 		}
 		
