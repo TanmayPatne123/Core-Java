@@ -2,19 +2,24 @@ package JavaPractiseQuestion.Multithreading;
 
 public class MultPractFirst {
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		
 		System.out.println("Application start");
 		
-		try 
-		{
-			Thread.sleep(3000);			
-		} catch (InterruptedException e) 
-		{
-			System.out.println("Hello I Catch it dont worry");
-		}
+		Thread thread = Thread.currentThread();
+		System.out.println(thread.getName());
+		System.out.println(thread.getPriority());
+		
+		
+		thread.sleep(5000);
+		
+		thread.setName("Tanmay");
+		thread.setPriority(3);
+		
+		System.out.println(thread.getName());
+		System.out.println(thread.getPriority());
+	
 		
 		System.out.println("Application end");
 	}
-
 }
