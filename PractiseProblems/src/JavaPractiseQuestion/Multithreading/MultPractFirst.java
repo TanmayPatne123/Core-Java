@@ -23,3 +23,5 @@ public class MultPractFirst {
 		System.out.println("Application end");
 	}
 }
+    
+

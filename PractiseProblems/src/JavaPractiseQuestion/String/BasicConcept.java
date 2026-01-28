@@ -40,7 +40,6 @@ public class BasicConcept {
 
 		System.out.println("--------------------------------");
 
-		
 		String b1="kunal";
 		
 		String string = new String("kunal");

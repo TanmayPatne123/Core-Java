@@ -3,7 +3,7 @@ public class FibonacciSeries {
 
 	public static void main(String[] args) {
 
-		int n=5;
+		int n=100;
 		Fibonacci(n);
 		
 
@@ -13,13 +13,14 @@ public class FibonacciSeries {
 		
 		int n1=0,n2=1;
 		
-		for(int i=0;i<=n;i++) 
+		
+		
+		while(n1<n)
 		{
-			System.out.println(n1+" ");
-			int n3=n2+n1;
+			System.out.print(n1+" ");
+			int n3=n1+n2;
 			n1=n2;
 			n2=n3;
 		}
 	}
-
 }
