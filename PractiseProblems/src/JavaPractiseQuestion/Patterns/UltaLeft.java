@@ -1,6 +1,6 @@
 package JavaPractiseQuestion.Patterns;
 
-public class RightPattern {
+public class UltaLeft {
 	
 	public static void main(String[] args) {
 		
@@ -10,14 +10,14 @@ public class RightPattern {
 		{
 			for(int j=1;j<=n;j++) 
 			{
-				if(j<=n-i) 
-				{
-					System.out.print(" ");
-				}
-				else 
-				{
-					System.out.print("*");
-				}
+			   if(j<=n-i+1) 
+			   {
+				   System.out.print("*");
+			   }
+			   else 
+			   {
+				   System.out.print(" ");
+			   }	
 			}
 			System.out.println();
 		}
