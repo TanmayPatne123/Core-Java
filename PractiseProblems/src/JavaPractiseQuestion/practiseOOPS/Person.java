@@ -67,32 +67,47 @@ public class Person {
 		
 
 		
-		Student s = new Student();
-		s.setName("Tanmay");
-		s.setEmail("tanmay@gmail.com");
-		s.setPhone("4567856789");
-		System.out.println("Enter student id");
-		long stuId=sc.nextLong();
-		s.setStudId(stuId);
+//		Student s = new Student();
+//		s.setName("Tanmay");
+//		s.setEmail("tanmay@gmail.com");
+//		s.setPhone("4567856789");
+//		System.out.println("Enter student id");
+//		long stuId=sc.nextLong();
+//		s.setStudId(stuId);
+//		sc.nextLine();
+//		System.out.println("Enter course name");
+//		String course=sc.nextLine();
+//		s.setCourseName(course);
+//		System.out.println("Enter Fees");
+//		double fees=sc.nextDouble();
+//		s.setFees(fees);
+//
+//		if(course.equalsIgnoreCase("java")) {
+//			System.out.println("Enroll in Java Course");
+//			s.displayDetails();
+//			s.enrollCourse();
+//		}else if(course.equalsIgnoreCase("python")) {
+//			System.out.println("Enroll in Python Course");
+//			s.displayDetails();
+//			s.enrollCourse();
+//		}
+		
+		Instructor instructor = new Instructor();
+		instructor.setName("David");
+		instructor.setPhone("6272722");
+		instructor.setEmail("david@123gmail.com");
+		
+		System.out.println("Enter Instroctor id");
+		long i=sc.nextLong();
+		instructor.setInstrtId(i);
 		sc.nextLine();
-		System.out.println("Enter course name");
-		String course=sc.nextLine();
-		s.setCourseName(course);
-		System.out.println("Enter Fees");
-		double fees=sc.nextDouble();
-		s.setFees(fees);
-
-		if(course.equalsIgnoreCase("java")) {
-			System.out.println("Enroll in Java Course");
-			s.displayDetails();
-			s.enrollCourse();
-		}else if(course.equalsIgnoreCase("python")) {
-			System.out.println("Enroll in Python Course");
-			s.displayDetails();
-			s.enrollCourse();
-		}
+		
+		System.out.println("Enter Specialization");
+		String s = sc.nextLine();
+		instructor.setSpecialization(s);
+		instructor.assignCourse();
+		
 	}
-
 }
 
 class Student extends Person
@@ -213,9 +228,16 @@ class Instructor extends Person {
 		if(specialization.equalsIgnoreCase("java"))
 		{
 			System.out.println("Java Course Assigned");
-		}else 
+			displayDetails();
+		}
+		else if(specialization.equalsIgnoreCase("python"))
 		{
 			System.out.println("Python Course Assigned");
+			displayDetails();
+		}
+		else if(specialization.equalsIgnoreCase("") || specialization==null) 
+		{
+			System.out.println("Can't be null or empty try again !");
 		}
 	}
 	
@@ -228,5 +250,4 @@ class Instructor extends Person {
 		System.out.println("Instructor id "+getInstrtId());
 		System.out.println("Specialization in "+getSpecialization());
 	}
-	
 }
