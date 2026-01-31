@@ -2,6 +2,8 @@ package JavaPractiseQuestion.practiseOOPS;
 
 import java.util.Scanner;
 
+import javax.swing.text.html.HTMLDocument.HTMLReader.SpecialAction;
+
 
 
 public class Person {
@@ -92,7 +94,9 @@ public class Person {
 //			s.enrollCourse();
 //		}
 		
+	
 		Instructor instructor = new Instructor();
+		Person p=instructor; // runtime polymorphism
 		instructor.setName("David");
 		instructor.setPhone("6272722");
 		instructor.setEmail("david@123gmail.com");
@@ -102,10 +106,22 @@ public class Person {
 		instructor.setInstrtId(i);
 		sc.nextLine();
 		
-		System.out.println("Enter Specialization");
-		String s = sc.nextLine();
-		instructor.setSpecialization(s);
+		String specialization = "";
+
+		do 
+		{
+		    System.out.println("Enter Specialization");
+		    specialization = sc.nextLine();
+		    if(specialization.trim().isEmpty()) 
+		    { // trim() se sirf spaces bhi catch hote hain
+		        System.out.println("Can't be null or empty, try again!");
+		    }
+		}
+		while (specialization.trim().isEmpty());
+
+		instructor.setSpecialization(specialization);
 		instructor.assignCourse();
+		p.displayDetails();
 		
 	}
 }
@@ -228,16 +244,10 @@ class Instructor extends Person {
 		if(specialization.equalsIgnoreCase("java"))
 		{
 			System.out.println("Java Course Assigned");
-			displayDetails();
 		}
 		else if(specialization.equalsIgnoreCase("python"))
 		{
 			System.out.println("Python Course Assigned");
-			displayDetails();
-		}
-		else if(specialization.equalsIgnoreCase("") || specialization==null) 
-		{
-			System.out.println("Can't be null or empty try again !");
 		}
 	}
 	
