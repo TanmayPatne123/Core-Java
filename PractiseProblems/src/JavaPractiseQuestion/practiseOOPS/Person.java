@@ -1,5 +1,6 @@
 package JavaPractiseQuestion.practiseOOPS;
 
+import java.time.LocalDate;
 import java.util.Scanner;
 
 import javax.swing.text.html.HTMLDocument.HTMLReader.SpecialAction;
@@ -259,5 +260,62 @@ class Instructor extends Person {
 		System.out.println("Phone is "+getPhone());
 		System.out.println("Instructor id "+getInstrtId());
 		System.out.println("Specialization in "+getSpecialization());
+	}
+}
+
+abstract class Course {
+	
+	protected String coursename;
+	protected long duration;
+	protected double price;
+	
+	
+	
+	public Course() {
+		
+	}
+	
+	public Course(String coursename,long duration,double price)
+	{
+		this.coursename=coursename;
+		this.duration=duration;
+		this.price=price;
+	}
+	
+	public String getCourseName()
+	{
+		return coursename;
+	}
+	
+	public void setCourseName(String courseName)
+	{
+		this.coursename=courseName;
+	}
+	
+	public long getDuration()
+	{
+		return duration;
+	}
+	
+	public void setDuration(long duration) 
+	{
+		this.duration=duration;
+	}
+	
+	public double getPrice() 
+	{
+		return price;
+	}
+	
+	public void setPrice(double price)
+	{
+		this.price=price;
+	}
+	
+	
+	public void viewCourseDetails() {
+		
+		
+		
 	}
 }
