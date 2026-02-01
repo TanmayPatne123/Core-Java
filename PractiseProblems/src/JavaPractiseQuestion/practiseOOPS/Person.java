@@ -62,9 +62,9 @@ public class Person {
 		System.out.println("Phone is "+getPhone());
 	}
 	
-	
-
 	public static void main(String[] args) {
+		
+		
 		
 		Scanner sc = new Scanner(System.in);
 		
@@ -313,9 +313,25 @@ abstract class Course {
 	}
 	
 	
-	public void viewCourseDetails() {
-		
+	public void viewCourseDetails() 
+	{
+		System.out.println("Course Name is "+getCourseName());
+		System.out.println("Course Duration is "+getDuration());
+		System.out.println("Course price is "+getPrice());
+	}
+	
+	
+	abstract public void getCourseFee();
+}
+
+class JavaCourse extends Course {
+	
+	
+	
+	@Override
+	public void getCourseFee() {
 		
 		
 	}
+	
 }
