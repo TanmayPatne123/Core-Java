@@ -79,7 +79,9 @@ public class DrawTanmay {
 				if(i==j && i<=(n-1)/2 || i+j==n-1) 
 				{
 					System.out.print("*");
-				}else {
+				}
+				else 
+				{
 					System.out.print(" ");
 				}
 			}

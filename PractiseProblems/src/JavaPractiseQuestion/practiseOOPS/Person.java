@@ -327,7 +327,6 @@ abstract class Course {
 class JavaCourse extends Course {
 	
 	
-	
 	@Override
 	public void getCourseFee() {
 		
