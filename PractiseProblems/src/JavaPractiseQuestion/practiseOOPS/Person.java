@@ -68,68 +68,12 @@ public class Person {
 		
 		Scanner sc = new Scanner(System.in);
 		
-
 		
-//		Student s = new Student();
-//		s.setName("Tanmay");
-//		s.setEmail("tanmay@gmail.com");
-//		s.setPhone("4567856789");
-//		System.out.println("Enter student id");
-//		long stuId=sc.nextLong();
-//		s.setStudId(stuId);
-//		sc.nextLine();
-//		System.out.println("Enter course name");
-//		String course=sc.nextLine();
-//		s.setCourseName(course);
-//		System.out.println("Enter Fees");
-//		double fees=sc.nextDouble();
-//		s.setFees(fees);
-//
-//		if(course.equalsIgnoreCase("java")) {
-//			System.out.println("Enroll in Java Course");
-//			s.displayDetails();
-//			s.enrollCourse();
-//		}else if(course.equalsIgnoreCase("python")) {
-//			System.out.println("Enroll in Python Course");
-//			s.displayDetails();
-//			s.enrollCourse();
-//		}
 		
-//	
-//		Instructor instructor = new Instructor();
-//		Person p=instructor; // runtime polymorphism
-//		instructor.setName("David");
-//		instructor.setPhone("6272722");
-//		instructor.setEmail("david@123gmail.com");
-//		
-//		System.out.println("Enter Instroctor id");
-//		long i=sc.nextLong();
-//		instructor.setInstrtId(i);
-//		sc.nextLine();
-//		
-//		String specialization = "";
-//
-//		do 
-//		{
-//		    System.out.println("Enter Specialization");
-//		    specialization = sc.nextLine();
-//		    if(specialization.trim().isEmpty()) 
-//		    { // trim() se sirf spaces bhi catch hote hain
-//		        System.out.println("Can't be null or empty, try again!");
-//		    }
-//		}
-//		while (specialization.trim().isEmpty());
-//
-//		instructor.setSpecialization(specialization);
-//		instructor.assignCourse();
-//		p.displayDetails();
 		
-	    Course c = new JavaCourse();
-	    c.setCourseName("Java");
-	    c.setDuration(3);
-	    c.setPrice(20000);
-	    c.getCourseFee();
-		c.viewCourseDetails();
+		
+		
+		
 	}
 }
 
