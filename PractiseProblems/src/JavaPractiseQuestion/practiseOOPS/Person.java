@@ -124,13 +124,12 @@ public class Person {
 //		instructor.assignCourse();
 //		p.displayDetails();
 		
-		JavaCourse javaCourse = new JavaCourse();
-		javaCourse.coursename="Java";
-		javaCourse.duration=5;
-		javaCourse.price=200000;
-		javaCourse.viewCourseDetails();
-		javaCourse.getCourseFee();
-		
+	    Course c = new JavaCourse();
+	    c.setCourseName("Java");
+	    c.setDuration(3);
+	    c.setPrice(20000);
+	    c.getCourseFee();
+		c.viewCourseDetails();
 	}
 }
 
@@ -200,8 +199,6 @@ class Student extends Person
 	}
 
 }
-
-
 
 class Instructor extends Person {
 	
@@ -343,7 +340,7 @@ class JavaCourse extends Course {
 			discount=price*0.10;
 		}
 		else {
-			discount=0;
+			discount=price*0.05;
 		}
 		
 		totalFees = price - discount + certification;
@@ -353,10 +350,29 @@ class JavaCourse extends Course {
 	    System.out.println("Total Fees to Pay: " + totalFees);
 	}
 	
-	public void viewCourseDetails() 
-	{
-		System.out.println("Course Name is "+getCourseName());
-		System.out.println("Course Duration is "+getDuration());
-		System.out.println("Course price is "+getPrice());
+}
+
+
+class PythonCourse extends Course{
+
+	double discount , certification=1500, totalFees;
+	@Override
+	public void getCourseFee() {
+		if(duration>3) 
+		{
+			discount=price*0.20;
+		}
+		else
+		{
+			discount=0.10;
+		}
+		
+		totalFees = price - discount + certification;
+
+	    System.out.println("Discount Applied: " + discount);
+	    System.out.println("Certification Fees: " + certification);
+	    System.out.println("Total Fees to Pay: " + totalFees);
+	    
 	}
 }
+
