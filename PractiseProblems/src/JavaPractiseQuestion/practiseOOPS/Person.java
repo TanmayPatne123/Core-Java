@@ -95,34 +95,41 @@ public class Person {
 //			s.enrollCourse();
 //		}
 		
-	
-		Instructor instructor = new Instructor();
-		Person p=instructor; // runtime polymorphism
-		instructor.setName("David");
-		instructor.setPhone("6272722");
-		instructor.setEmail("david@123gmail.com");
+//	
+//		Instructor instructor = new Instructor();
+//		Person p=instructor; // runtime polymorphism
+//		instructor.setName("David");
+//		instructor.setPhone("6272722");
+//		instructor.setEmail("david@123gmail.com");
+//		
+//		System.out.println("Enter Instroctor id");
+//		long i=sc.nextLong();
+//		instructor.setInstrtId(i);
+//		sc.nextLine();
+//		
+//		String specialization = "";
+//
+//		do 
+//		{
+//		    System.out.println("Enter Specialization");
+//		    specialization = sc.nextLine();
+//		    if(specialization.trim().isEmpty()) 
+//		    { // trim() se sirf spaces bhi catch hote hain
+//		        System.out.println("Can't be null or empty, try again!");
+//		    }
+//		}
+//		while (specialization.trim().isEmpty());
+//
+//		instructor.setSpecialization(specialization);
+//		instructor.assignCourse();
+//		p.displayDetails();
 		
-		System.out.println("Enter Instroctor id");
-		long i=sc.nextLong();
-		instructor.setInstrtId(i);
-		sc.nextLine();
-		
-		String specialization = "";
-
-		do 
-		{
-		    System.out.println("Enter Specialization");
-		    specialization = sc.nextLine();
-		    if(specialization.trim().isEmpty()) 
-		    { // trim() se sirf spaces bhi catch hote hain
-		        System.out.println("Can't be null or empty, try again!");
-		    }
-		}
-		while (specialization.trim().isEmpty());
-
-		instructor.setSpecialization(specialization);
-		instructor.assignCourse();
-		p.displayDetails();
+		JavaCourse javaCourse = new JavaCourse();
+		javaCourse.coursename="Java";
+		javaCourse.duration=5;
+		javaCourse.price=200000;
+		javaCourse.viewCourseDetails();
+		javaCourse.getCourseFee();
 		
 	}
 }
@@ -266,7 +273,7 @@ class Instructor extends Person {
 abstract class Course {
 	
 	protected String coursename;
-	protected long duration;
+	protected double duration;
 	protected double price;
 	
 	
@@ -275,7 +282,7 @@ abstract class Course {
 		
 	}
 	
-	public Course(String coursename,long duration,double price)
+	public Course(String coursename,double duration,double price)
 	{
 		this.coursename=coursename;
 		this.duration=duration;
@@ -292,12 +299,12 @@ abstract class Course {
 		this.coursename=courseName;
 	}
 	
-	public long getDuration()
+	public double getDuration()
 	{
 		return duration;
 	}
 	
-	public void setDuration(long duration) 
+	public void setDuration(double duration) 
 	{
 		this.duration=duration;
 	}
@@ -328,9 +335,28 @@ class JavaCourse extends Course {
 	
 	
 	@Override
-	public void getCourseFee() {
+	public void getCourseFee()
+	{
+		double discount , certification=1500, totalFees;
+		if(duration>4) 
+		{
+			discount=price*0.10;
+		}
+		else {
+			discount=0;
+		}
 		
-		
+		totalFees = price - discount + certification;
+
+	    System.out.println("Discount Applied: " + discount);
+	    System.out.println("Certification Fees: " + certification);
+	    System.out.println("Total Fees to Pay: " + totalFees);
 	}
 	
+	public void viewCourseDetails() 
+	{
+		System.out.println("Course Name is "+getCourseName());
+		System.out.println("Course Duration is "+getDuration());
+		System.out.println("Course price is "+getPrice());
+	}
 }
