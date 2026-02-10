@@ -30,7 +30,6 @@ class Library implements Runnable{
 						}
 					}
 				}
-				
 			}
 			catch (Exception e)
 			{
@@ -41,17 +40,17 @@ class Library implements Runnable{
 			try 
 			{
 				Thread.sleep(3000);
-				synchronized (r1)
+				synchronized (r3)
 				{
-					System.out.println("stud2 have aquired"+r1);
+					System.out.println("stud2 have aquired"+r3);
 					Thread.sleep(4000);
 					synchronized (r2) 
 					{
 						System.out.println("stud2 have aquired"+r2);
 						Thread.sleep(4000);
-						synchronized (r3) 
+						synchronized (r1) 
 						{
-						System.out.println("stud2 have aquired"+r3);	
+						System.out.println("stud2 have aquired"+r1);	
 						}
 					}
 				}
