@@ -37,6 +37,5 @@ public class Launch1 {
 		{
 			System.out.println(listIterator1.previous());
 		}
-		
 	}
 }
