@@ -2,6 +2,7 @@ package JavaFundamentalQuestions.collections;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.ListIterator;
 
 public class Launch1 {
 	
@@ -22,7 +23,20 @@ public class Launch1 {
 			System.out.println(iterator.next());
 		}
 		
+		System.out.println("-------------------------------");
 		
+		ListIterator listIterator = al.listIterator();
+		while(listIterator.hasNext()) 
+		{
+			System.out.println(listIterator.next());
+		}
+		
+		System.out.println("-----------------------");
+		ListIterator listIterator1 = al.listIterator(al.size());
+		while(listIterator1.hasPrevious()) 
+		{
+			System.out.println(listIterator1.previous());
+		}
 		
 	}
 }
