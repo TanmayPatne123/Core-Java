@@ -1,6 +1,7 @@
 package JavaFundamentalQuestions.collections;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class Launch1 {
 	
@@ -14,10 +15,14 @@ public class Launch1 {
 		System.out.println(al);
 		
 		
-			double d =(double) al.get(1);	// downcasting object to primitive type		
-			System.out.println(d);
+
+		Iterator iterator = al.iterator();
+		while(iterator.hasNext())
+		{
+			System.out.println(iterator.next());
+		}
+		
 		
 		
 	}
-
 }
