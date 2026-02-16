@@ -2,10 +2,17 @@ package SpringCore;
 
 public class TestMain {
 	
-	public Boolean buyTheCourse(double amount) {
+	
+	private ICourse iCourse;
+	
+	public void setCourse(ICourse iCourse) 
+	{
+		this.iCourse=iCourse;
+	}
+	
+	public Boolean buyTheCourse(double amount) {		
 		
-		Java java = new Java();  // this is tight coupled  example
-		return java.getTheCourse(amount);
+		return iCourse.getTheCourse(amount);
 	}
 
 }
