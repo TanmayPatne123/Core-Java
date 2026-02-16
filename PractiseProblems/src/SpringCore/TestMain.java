@@ -5,7 +5,10 @@ public class TestMain {
 	
 	private ICourse iCourse;
 	
-	public void setCourse(ICourse iCourse) 
+	
+	
+	
+	public void setCourse(ICourse iCourse) // setter injection
 	{
 		this.iCourse=iCourse;
 	}

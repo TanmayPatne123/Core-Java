@@ -10,13 +10,14 @@ public class Launch {
 		
 		Boolean status = testMain.buyTheCourse(2000);
 		
-		if(status) {
+		if(status)
+		{
 			System.out.println("Course Enrolled Successfully");
-		}else {
+		}
+		else 
+		{
 			System.out.println("Failed to enroll");
 		}
 	}
 	
-	
-
 }
