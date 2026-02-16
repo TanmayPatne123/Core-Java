@@ -4,7 +4,7 @@ public class Launch {
 	
 	public static void main(String[] args) {
 		
-		TestMain testMain = new TestMain();
+		TestMain testMain = new TestMain(new Java()); // This is Constructor injection
 		
 		testMain.setCourse(new Java()); // Achieve Dependency Injection.
 		
