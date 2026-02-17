@@ -7,7 +7,7 @@ import javax.swing.text.html.HTMLDocument.HTMLReader.SpecialAction;
 
 
 
-public class Person {
+abstract  class Person {
 	
 	
 	private String name;
@@ -62,37 +62,34 @@ public class Person {
 		System.out.println("Phone is "+getPhone());
 	}
 	
-	public static void main(String[] args) {
-		
-		
-		
-		Scanner sc = new Scanner(System.in);
-		
-		
-		
-		
-		
-		
-		
-	}
 }
 
 class Student extends Person
 {
 	
+	private Course course;
+	
+
+	public void setCourse(Course course) {
+		this.course = course;
+	}
+
+	public Course getCourse() {
+		return course;
+	}
+
+
+
 	private long studentid;
-	private String coursename;
-	private double fees;
 	
 	public Student() {
 		
 	}
 
-	public Student(long studentid, String coursename, double fees) {
+	public Student(long studentid) {
 		super();
 		this.studentid = studentid;
-		this.coursename = coursename;
-		this.fees = fees;
+		
 	}
 	
 	
@@ -104,25 +101,10 @@ class Student extends Person
 		this.studentid=studId;
 	}
 	
-	public String getCourseName() {
-		return coursename;
-	}
 	
-	public void setCourseName(String courseName) {
-		this.coursename=courseName;
-	}
-	
-	public double getFees() {
-		return fees;
-	}
-	
-	public void setFees(double fees) {
-		this.fees=fees;
-	}
-
 	@Override
 	public String toString() {
-		return "Student [studentid=" + studentid + ", coursename=" + coursename + ", fees=" + fees + "]";
+		return "Student [studentid=" + studentid +  "]";
 	}
 	
 	
@@ -134,17 +116,35 @@ class Student extends Person
 	@Override
 	public void displayDetails()
 	{
-		System.out.println("Name is "+getName());
-		System.out.println("Email is "+getEmail());
-		System.out.println("Phone is "+getPhone());
-		System.out.println("Student id is "+getStudId());
-		System.out.println("Course Name is "+getCourseName());
-		System.out.println("Fees is "+getFees());
+		System.out.println("Name: " + getName());
+	    System.out.println("Email: " + getEmail());
+	    System.out.println("Phone: " + getPhone());
+	    System.out.println("Student ID: " + getStudId());
+
+	    if(course != null) {
+	        course.viewCourseDetails();
+	        course.getCourseFee();
+	    } else {
+	        System.out.println("No Course Enrolled yet");
+	    }
+	
 	}
 
 }
 
 class Instructor extends Person {
+	
+	
+	private Course course;
+	
+	public void setCourse(Course course) {
+		this.course = course;
+	}
+
+	public Course getCourse() {
+		return course;
+	}
+
 	
 	private long instructorid;
 	private String specialization;
@@ -190,14 +190,7 @@ class Instructor extends Person {
 	
 	public void assignCourse()
 	{
-		if(specialization.equalsIgnoreCase("java"))
-		{
-			System.out.println("Java Course Assigned");
-		}
-		else if(specialization.equalsIgnoreCase("python"))
-		{
-			System.out.println("Python Course Assigned");
-		}
+		course.viewCourseDetails();
 	}
 	
 	
@@ -208,6 +201,17 @@ class Instructor extends Person {
 		System.out.println("Phone is "+getPhone());
 		System.out.println("Instructor id "+getInstrtId());
 		System.out.println("Specialization in "+getSpecialization());
+		
+		if(course != null) 
+		{
+	        course.viewCourseDetails();
+	        course.getCourseFee();
+	    }
+		else 
+	    {
+	        System.out.println("No Course Assigned yet");
+	    }
+	
 	}
 }
 
@@ -264,7 +268,7 @@ abstract class Course {
 	public void viewCourseDetails() 
 	{
 		System.out.println("Course Name is "+getCourseName());
-		System.out.println("Course Duration is "+getDuration());
+		System.out.println("Course Duration is "+getDuration()+" Months");
 		System.out.println("Course price is "+getPrice());
 	}
 	
