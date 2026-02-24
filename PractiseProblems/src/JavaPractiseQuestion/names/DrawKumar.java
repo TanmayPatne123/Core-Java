@@ -22,7 +22,7 @@ public class DrawKumar {
 			System.out.print("  ");
 			for(int j=0;j<n;j++) 
 			{
-				if(j==0 || i==n-1 || j==n-1) 
+				if(j==0 && i!=n-1 || i==n-1 && j!=0 && j!=n-1 || j==n-1 && i!=n-1) 
 				{
 					System.out.print("*");
 				}
