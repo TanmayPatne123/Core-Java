@@ -6,7 +6,7 @@ public class DrawElephant {
 	public static void main(String[] args) {
 		
 		
-		int n=11;
+		int n=9;
 		
 		for(int i=0;i<n;i++) 
 		{
@@ -84,7 +84,7 @@ public class DrawElephant {
 			System.out.print("  ");
 			for(int j=0;j<n;j++) 
 			{
-				if(j==0 || j==n-1 || i==(n-1)/2)
+				if(j==0 || j==n-1 || i==j)
 				{
 					System.out.print("*");
 				}
@@ -106,6 +106,7 @@ public class DrawElephant {
 				}
 			}
 			System.out.println();
+			
 		}
 		
 	}
