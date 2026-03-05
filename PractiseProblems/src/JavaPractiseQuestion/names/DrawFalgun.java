@@ -14,7 +14,8 @@ public class DrawFalgun {
 				{
 					System.out.print("*");
 				}
-				else {
+				else 
+				{
 					System.out.print(" ");
 				}
 			}
@@ -52,7 +53,8 @@ public class DrawFalgun {
 				{
 					System.out.print("*");
 				}
-				else {
+				else 
+				{
 					System.out.print(" ");
 				}
 			}
@@ -63,7 +65,8 @@ public class DrawFalgun {
 				{
 					System.out.print("*");
 				}
-				else {
+				else
+				{
 					System.out.print(" ");
 				}
 			}
