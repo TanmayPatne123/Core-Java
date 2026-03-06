@@ -4,9 +4,9 @@ public class Launch {
 	
 	public static void main(String[] args) {
 		
-		TestMain testMain = new TestMain(new Java()); // This is Constructor injection
+		TestMain testMain = new TestMain(new SpringBoot()); // This is Constructor injection
 		
-		testMain.setCourse(new Java()); // Achieve Dependency Injection.
+//		testMain.setCourse(new SpringBoot()); // Achieve Dependency Injection.
 		
 		Boolean status = testMain.buyTheCourse(2000);
 		
@@ -19,5 +19,4 @@ public class Launch {
 			System.out.println("Failed to enroll");
 		}
 	}
-	
 }

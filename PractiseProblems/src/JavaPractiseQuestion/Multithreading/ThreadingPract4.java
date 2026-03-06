@@ -11,7 +11,11 @@ class Alpha3 implements Runnable{
 			power2();
 		}else {
 			Power3();
-		}
+		}   
+		 
+		 
+		 
+		 
 	}
 	
 	public void Power1() 

@@ -8,10 +8,12 @@ public class CountApp {
 		char find ='g';
 
 		int c=0;
-		for(int i=0;i<s.length();i++) {
-			if(s.charAt(i)==find) {
+		for(int i=0;i<s.length();i++)
+		{
+			if(s.charAt(i)==find)
+			{
 				c++;
-			}
+			} 
 		}
 		
 		System.out.println("Chara apper " +c);

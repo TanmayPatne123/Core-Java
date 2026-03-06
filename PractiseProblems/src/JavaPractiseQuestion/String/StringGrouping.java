@@ -14,7 +14,7 @@ public class StringGrouping {
 			System.out.print(s.substring(i, i+size));
 			if(i+size<s.length())
 			{
-				System.out.print(" - ");
+				System.out.print("-");
 			}
 		}
 	}
