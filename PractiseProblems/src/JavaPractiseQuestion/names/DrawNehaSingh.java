@@ -4,7 +4,7 @@ public class DrawNehaSingh {
 	
 	public static void main(String[] args) {
 		
-		int n=11;
+		int n=9;
 		
 		for(int i=0;i<n;i++) 
 		{
