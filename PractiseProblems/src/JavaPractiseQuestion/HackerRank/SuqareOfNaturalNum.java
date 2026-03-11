@@ -1,4 +1,4 @@
-package JavaPractiseQuestion.GeeksForGeeks;
+package JavaPractiseQuestion.HackerRank;
 
 public class SuqareOfNaturalNum {
 	
