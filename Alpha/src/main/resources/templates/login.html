@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Login</title>
+	<link rel="stylesheet" th:href="@{/style.css}">
+</head>
+<body>
+
+<div class="container">
+
+<h2>Login</h2>
+
+<form th:action="@{/login}" method="post">
+
+<label>Username</label>
+<input type="text" name="username" required>
+
+<label>Password</label>
+<input type="password" name="password" required>
+
+<button type="submit">Login</button>
+
+</form>
+
+<p class="error" th:if="${param.error}">
+Invalid username or password
+</p>
+
+<p>
+New user? <a th:href="@{/register}">Register here</a>
+</p>
+
+</div>
+
+</body>
+</html>

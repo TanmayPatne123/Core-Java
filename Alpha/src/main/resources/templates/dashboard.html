@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Dashboard</title>
+<link rel="stylesheet" th:href="@{/expense.css}">
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Expense Tracker Dashboard</h2>
+
+<div style="text-align:center;margin-top:30px;">
+
+<a th:href="@{/add-expense}">
+<button class="btn add-btn">Add Expense</button>
+</a>
+
+<a th:href="@{/expenses}">
+<button class="btn edit-btn">View Expenses</button>
+</a>
+
+</div>
+
+</div>
+
+</body>
+</html>
